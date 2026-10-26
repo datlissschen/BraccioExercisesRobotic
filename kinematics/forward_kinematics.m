@@ -61,6 +61,16 @@ disp('--- Compare results ---');
 fprintf('Part A (Geometrisch): X = %.4f, Y = %.4f\n', tcp_geometric(1), tcp_geometric(2));
 fprintf('Part C (DH-Matrizen): X = %.4f, Y = %.4f\n', tcp_dh(1), tcp_dh(2));
 
+%% Exercise 1.1 d
+% test values
+xD = [3.5; 1.5];
+xE = [2.0; 2.0];
+xF = [1.0; 1.0];
+
+% calculate
+
+% plot
+
 %% Functions
 % Function for calculating forward kinematics
 function x = forward(q)
@@ -101,6 +111,7 @@ function plot_manipulator(q, x_TCP_vec, title_str)
     ylabel('y_0');
 end
 
+% function for calculating the dh matrix
 function T = dh_matrix(theta, d, a, alpha)
     T = [cosd(theta) -sind(theta)*cosd(alpha) sind(theta)*sind(alpha) a*cosd(theta);
         sind(theta) cosd(theta)*cosd(alpha) -cosd(theta)*sind(alpha) a*sind(theta);
