@@ -1,4 +1,4 @@
-%% Main
+%% Exercise 1.1a
 % Initialize
 qA = [20;45];
 qB = [45; -30];
@@ -14,6 +14,32 @@ figure('Name', 'Manipulator Visualization');
 subplot(1,3,1); plot_manipulator(qA, tcpA, 'Position A');
 subplot(1,3,2); plot_manipulator(qB, tcpB, 'Position B');
 subplot(1,3,3); plot_manipulator(qC, tcpC, 'Position C');
+
+%% Exercise 1.1b
+b_tcpX = [];
+b_tcpY = [];
+idx = 1;
+
+for t1 = 0:110 
+    for t2 = -120:120
+        q = [t1, t2];
+        tcp_current = forward(q);
+        %store results
+        b_tcpX(idx) = tcp_current(1);
+        b_tcpY(idx) = tcp_current(2);
+        
+        idx = idx+1;
+    end
+end
+
+% Plot permissible working range
+figure('Name', 'Permissible Working Range')
+plot(b_tcpX, b_tcpY, '.', 'Color', 'cyan') 
+axis equal; % prevent workspace look distorted
+title('Workspace of the 2-DOF Manipulator');
+xlabel('x_0');
+ylabel('y_0');
+
 
 %% Functions
 % Function for calculating forward kinematics
