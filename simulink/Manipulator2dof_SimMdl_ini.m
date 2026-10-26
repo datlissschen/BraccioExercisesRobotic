@@ -20,6 +20,10 @@ close all
 clear
 clc
 
+
+%% Link .mat file to initialization script
+load('Manipulator2dof_refSig.mat');
+
 %% Parameter für 2-DOF Manipulator in Simulink
 
 manip.l1 = 3.0;            % [m] Link 1 length
