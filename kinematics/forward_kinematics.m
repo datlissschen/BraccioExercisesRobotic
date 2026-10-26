@@ -11,9 +11,9 @@ tcpC = forward(qC);
 
 % Plot position of manipulator
 figure('Name', 'Manipulator Visualization');
-subplot(1,3,1); plot_manipulator(qA, x_A, 'Position A');
-subplot(1,3,2); plot_manipulator(qB, x_B, 'Position B');
-subplot(1,3,3); plot_manipulator(qC, x_C, 'Position C');
+subplot(1,3,1); plot_manipulator(qA, tcpA, 'Position A');
+subplot(1,3,2); plot_manipulator(qB, tcpB, 'Position B');
+subplot(1,3,3); plot_manipulator(qC, tcpC, 'Position C');
 
 %% Functions
 % Function for calculating forward kinematics
