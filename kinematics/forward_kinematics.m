@@ -40,6 +40,26 @@ title('Workspace of the 2-DOF Manipulator');
 xlabel('x_0');
 ylabel('y_0');
 
+%% Exercise 1.1c
+q_test = [20; 45];
+l1 = 3;
+l2 = 1;
+
+A_0_1 = dh_matrix(q_test(1), 0, l1, 0); 
+A_1_2 = dh_matrix(q_test(2), 0, l2, 0); 
+
+% transformation (T_0_2) from KS0 to KS2
+T_0_2 = A_0_1 * A_1_2;
+
+% TCP-Position in KS0
+tcp_dh = T_0_2(1:2, 4);
+
+% Compare with Part A
+tcp_geometric = forward(q_test);
+
+disp('--- Compare results ---');
+fprintf('Part A (Geometrisch): X = %.4f, Y = %.4f\n', tcp_geometric(1), tcp_geometric(2));
+fprintf('Part C (DH-Matrizen): X = %.4f, Y = %.4f\n', tcp_dh(1), tcp_dh(2));
 
 %% Functions
 % Function for calculating forward kinematics
@@ -79,4 +99,11 @@ function plot_manipulator(q, x_TCP_vec, title_str)
     title(title_str);
     xlabel('x_0');
     ylabel('y_0');
+end
+
+function T = dh_matrix(theta, d, a, alpha)
+    T = [cosd(theta) -sind(theta)*cosd(alpha) sind(theta)*sind(alpha) a*cosd(theta);
+        sind(theta) cosd(theta)*cosd(alpha) -cosd(theta)*sind(alpha) a*sind(theta);
+        0 sind(alpha) cosd(alpha) d;
+        0 0 0 1];
 end
