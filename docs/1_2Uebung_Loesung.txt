@@ -24,4 +24,9 @@ Nach Ablauf der Simulationszeit
 => Grundsätzlich ist der Unterschied hinsichtlich Riebung und Widerstände zu beachten. 
 In Realität, würde die Bewegung sich langsam entschleunigen.
 
+## d. Beschreibung rein vorgesteuertes System
+Die Gelenkarme drehen sich nun um 360 grad.
+Dabei ist eine merkliche Verlangsamung an gewissen punkten zu sehen.
+
+## e. Beschreibung Computed Torque Vorsteuerung geregeltes System
 
