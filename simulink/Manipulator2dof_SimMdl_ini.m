@@ -76,4 +76,8 @@ manip.kd2 = 28;               % [N*m*s/rad]
 manip.tau1_max = 4500;        % [N*m]
 manip.tau2_max = 1800;        % [N*m]
 
+% PT" Filter (1.1d)
+T = 0.01;
+d = 0.2;
+
 
