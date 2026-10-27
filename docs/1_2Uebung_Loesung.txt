@@ -1,0 +1,27 @@
+# Übungsaufgabe 1.2
+## a. - Einstieg
+Bestandteile:
+- Referenzsignale
+- Filter (PT2)
+- Trajektorien
+- PD Controller
+- Drehmomentverfahren
+-  Manipulator Model
+
+Einstellungen für Simulation:
+Solver:ode15s, variable Schrittweite
+Schrittweite: max Schrittweite liegt bei 0.01
+Simulationszeit: Start bei 0.0, endet bei 20
+
+
+## b. - Beschreibung resultierendes Verhalten
+
+Gezeigt sind zwei Arme mit zwei Gelenken. 
+Bei Start der Simulation fängt das Modell an von rechts nach links zu schwingen. 
+Das untere Gelenk schwingt dabei deutlich mehr als das obere.
+Nach Ablauf der Simulationszeit
+
+=> Grundsätzlich ist der Unterschied hinsichtlich Riebung und Widerstände zu beachten. 
+In Realität, würde die Bewegung sich langsam entschleunigen.
+
+
