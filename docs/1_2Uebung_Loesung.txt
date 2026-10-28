@@ -29,5 +29,9 @@ Die Gelenkarme drehen sich nun um 360 grad.
 Dabei ist eine merkliche Verlangsamung an gewissen punkten zu sehen.
 
 ## e. Beschreibung Computed Torque Vorsteuerung geregeltes System
-Deutlich verstärktere Bewegung und unkontrolliertere Bewegungen
+Deutlich verstärktere Bewegung und unkontrolliertere Bewegungen.
+
+## f. Einfluss von Modellfehlern
+Leichte Abweichungen des Verhaltens sind zu bemerken.
+
 
