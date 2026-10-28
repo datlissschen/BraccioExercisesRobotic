@@ -31,9 +31,9 @@ manip.l2 = 1.0;            % [m] Link 2 length
 manip.m1 = 30.0;           % [kg] Link 1 point mass
 manip.m2 = 10.0;           % [kg] Link 2 point mass
 
-%--------- TODO Teilaufgabe f) --------------------------------------------
-manip.m1plant = manip.m1;%*1.05;  % Simulierter Modellfehler
-manip.m2plant = manip.m2;%*0.95;  % Simulierter Modellfehler
+%--------- Teilaufgabe f) --------------------------------------------
+manip.m1plant = manip.m1*1.05;  % Simulierter Modellfehler
+manip.m2plant = manip.m2*0.95;  % Simulierter Modellfehler
 %--------------------------------------------------------------
 
 % Slender-link cross section used for geometry and inertia approximation
@@ -75,5 +75,9 @@ manip.kd2 = 28;               % [N*m*s/rad]
 % Actuator saturation
 manip.tau1_max = 4500;        % [N*m]
 manip.tau2_max = 1800;        % [N*m]
+
+% PT" Filter (1.1d)
+T = 0.01;
+d = 0.2;
 
 
