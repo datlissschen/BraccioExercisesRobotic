@@ -279,9 +279,7 @@ braccioCubes.dt = 0.01;                 % Schrittweite = FixedStep des Modells [
 
 %% E-Fences / Arbeitsraumbeschränkung
 
-% ----------- TODO ---------------------
-efence1_coord.x = -0.2;  
-% --------------------------------------
+efence1_coord.x = -0.2;
 efence1 = collisionBox(0.002,0.3,0.3);
 efence1.Pose = trvec2tform([efence1_coord.x 0 0.15]);
 
