@@ -1,0 +1,9 @@
+# Uebung 2
+
+## f
+### output: 
+TCP_hom = [0.0060; 0.0000; 0.5015; 1.0000]
+0> entspricht der phyisischen Home Position des Braccio Arms
+
+
+

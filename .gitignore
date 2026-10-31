@@ -40,3 +40,6 @@ codegen/
 *.sbproj.backup
 *.sbproj.bak
 *.DS_Store
+
+# macOS Sytsem files
+.DS_Store

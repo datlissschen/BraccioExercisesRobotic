@@ -285,8 +285,11 @@ efence1.Pose = trvec2tform([efence1_coord.x 0 0.15]);
 
 
 %% Inverse Kinematics Designer
+sessionPath = which('Braccio_iksession.mat');
 
-inverseKinematicsDesigner("Braccio_iksession.mat")
+if isempty(sessionPath)
+    sessionPath = fullfile(pwd, 'Braccio_iksession.mat');
+end
 
 %% Bahn für Regal-Positionierung
 cartesianPath.time = [0       2       4       6       8       10      12      14      16];
