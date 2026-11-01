@@ -293,11 +293,11 @@ end
 
 %% Bahn für Regal-Positionierung
 cartesianPath.time = [0       2       4       6       8       10      12      14      16];
-cartesianPath.x =    [0.4     0.4     0.4     0.4     0.4     0.4     0.4     0.4     0.4]; % TODO: Hier müssen die x-Sollwerte passend zum Zeit-Vektor eingetragen werden
-cartesianPath.z =    [0.2     0.2     0.2     0.2     0.2     0.2     0.2     0.2     0.2]; % TODO: Hier müssen die z-Sollwerte passend zum Zeit-Vektor eingetragen werden
-cartesianPath.angle =[0       0       0       0       0       0       0       0       0];   % Soll-Winkelstellung
+cartesianPath.x =     [0.3567 0.3567 0.3567 0.3420 0.3978 0.3978 0.3580 0.3485 0.3567];
+cartesianPath.z =     [0.0211 0.0211 0.0211 0.1708 0.1274 0.1274 0.2647 0.2213 0.0211];
+cartesianPath.angle = [-0.7941 -0.7941 -0.7941 -0.2705 -0.3142 -0.3142 0.1745 0.0000 -0.7941];
 cartesianPath.q6 =   [10      60      60      60      60      10      10      10      10]*pi/180;   % Greifer Stellung
-cartesianPath.startConfig = [0 0 0 0 0 0]'*pi/180; % TODO: Via IK Designer ermittelte Anfangskonfiguration
+cartesianPath.startConfig = [0.00 90.00 0.00 90.0 0.00 0.00]'*pi/180; % TODO: Via IK Designer ermittelte Anfangskonfiguration
 
 figure('name','Regal-Positionierung in kartesischen Koordinaten')
 subplot(3,2,1);
